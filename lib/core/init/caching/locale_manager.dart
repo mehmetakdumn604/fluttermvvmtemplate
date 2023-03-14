@@ -12,32 +12,32 @@ class LocaleDbManager {
     return instance._preferences;
   }
 
-  Future<void> setStringValue(PreferencesKey PreferencesKey, String value) async {
-    await _preferences?.setString(PreferencesKey.name, value);
+  Future<void> setStringValue(PreferencesKey preferencesKey, String value) async {
+    await _preferences?.setString(preferencesKey.name, value);
   }
 
   String getStringValue(PreferencesKey key) {
     return _preferences?.getString(key.name) ?? '';
   }
 
-  Future<void> setBoolValue(PreferencesKey PreferencesKey, bool value) async {
-    await _preferences?.setBool(PreferencesKey.name, value);
+  Future<void> setBoolValue(PreferencesKey preferencesKey, bool value) async {
+    await _preferences?.setBool(preferencesKey.name, value);
   }
 
   bool getBoolValue(PreferencesKey key, {bool defaultValue = false}) {
     return _preferences?.getBool(key.name) ?? defaultValue;
   }
 
-  Future<void> setIntValue(PreferencesKey PreferencesKey, int value) async {
-    await _preferences?.setInt(PreferencesKey.name, value);
+  Future<void> setIntValue(PreferencesKey preferencesKey, int value) async {
+    await _preferences?.setInt(preferencesKey.name, value);
   }
 
   int getIntValue(PreferencesKey key, {int defaultValue = 0}) {
     return _preferences?.getInt(key.name) ?? defaultValue;
   }
 
-  Future<void> setDoubleValue(PreferencesKey PreferencesKey, double value) async {
-    await _preferences?.setDouble(PreferencesKey.name, value);
+  Future<void> setDoubleValue(PreferencesKey preferencesKey, double value) async {
+    await _preferences?.setDouble(preferencesKey.name, value);
   }
 
   double getDoubleValue(PreferencesKey key, {double defaultValue = 0.0}) {
